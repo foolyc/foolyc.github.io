@@ -86,7 +86,7 @@ var _hmt = _hmt || [];
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="foolyc,algorithm, AI, deep learning, robot" />
+  <meta name="keywords" content="AI," />
 
 
 
@@ -102,19 +102,18 @@ var _hmt = _hmt || [];
 
 
 
-<meta name="description" content="阅读论文《Learning and Transfer of Modulated Locomotor Controllers》过程的翻译与笔记
-简介一个新生的脊椎动物可以在仅仅一分钟内踏出它生命中的第一步，在半小时内就能学会走路。一个人类婴儿，">
+<meta name="description" content="调控运动控制器的学习和迁移">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Learning and Transfer of Modulated Locomotor Controllers">
 <meta property="og:url" content="http://foolyc.com/2017/03/04/Learning-and-Transfer-of-Modulated-Locomotor-Controllers/index.html">
 <meta property="og:site_name" content="foolyc">
-<meta property="og:description" content="阅读论文《Learning and Transfer of Modulated Locomotor Controllers》过程的翻译与笔记
-简介一个新生的脊椎动物可以在仅仅一分钟内踏出它生命中的第一步，在半小时内就能学会走路。一个人类婴儿，">
-<meta property="og:updated_time" content="2017-03-04T11:23:09.659Z">
+<meta property="og:description" content="调控运动控制器的学习和迁移">
+<meta property="og:image" content="http://img1.ph.126.net/oJoKrqo_WxBrNk6zTiNNJg==/6631999052050304890.png">
+<meta property="og:updated_time" content="2017-04-05T07:43:35.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learning and Transfer of Modulated Locomotor Controllers">
-<meta name="twitter:description" content="阅读论文《Learning and Transfer of Modulated Locomotor Controllers》过程的翻译与笔记
-简介一个新生的脊椎动物可以在仅仅一分钟内踏出它生命中的第一步，在半小时内就能学会走路。一个人类婴儿，">
+<meta name="twitter:description" content="调控运动控制器的学习和迁移">
+<meta name="twitter:image" content="http://img1.ph.126.net/oJoKrqo_WxBrNk6zTiNNJg==/6631999052050304890.png">
 
 
 
@@ -337,6 +336,28 @@ var _hmt = _hmt || [];
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -360,6 +381,10 @@ var _hmt = _hmt || [];
           
 
           
+              <div class="post-description">
+                  调控运动控制器的学习和迁移
+              </div>
+          
 
         </div>
       </header>
@@ -372,9 +397,18 @@ var _hmt = _hmt || [];
       
 
       
-        <p>阅读论文《Learning and Transfer of Modulated Locomotor Controllers》过程的翻译与笔记</p>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>一个新生的脊椎动物可以在仅仅一分钟内踏出它生命中的第一步，在半小时内就能学会走路。一个人类婴儿，</p>
-
+        <p>阅读论文《Learning and Transfer of Modulated Locomotor Controllers》过程的笔记记录。</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>DeepMind的这篇文章，针对运动型任务，研究了一种新型的架构和训练过程。在该架构中，具有本体感应的高频传感器和低级「脊椎（spinal）」结构的网络通过对简单任务的训练来学习感觉运动的原理（primitives）。预训练的低阶模块，连接到一个低频、高级的「大脑皮层」网络，这个网络连接了所有的传感器，通过调控传输到「脊柱」网络的信息来控制行为。在单个端到端的架构完全失败的场景下，我们使用带预训练的「脊柱」架构能在多个高级任务中取得成功，并且还能在稀疏奖励空间（sparse reward）中能够进行有效探索。该文进行了 3 个模拟测试：16自由度的蛇，20自由度的四脚生物，以及54自由度的人。展示视频在youtube<a href="https://youtu.be/sboPYvhpraQ" target="_blank" rel="external">视频</a>上。</p>
+<h1 id="spinal架构"><a href="#spinal架构" class="headerlink" title="spinal架构"></a>spinal架构</h1><p><img src="http://img1.ph.126.net/oJoKrqo_WxBrNk6zTiNNJg==/6631999052050304890.png" alt="img"></p>
+<p>该结构类似与人的肢体控制结构，分为高阶控制器（HLC）和低阶控制器(LLC),高阶控制器输出低阶控制器的调制模式信号，像人的中枢通过脊柱给肢体发送指令信号一样，而低阶控制器则负责完成一些低级/可复用的基础动作，类似与人肢体简单的抬手等基础动作。</p>
+<p>如图所示， 低阶控制器LLC接受部分感知信号（o）与高阶控制器的模态信号（c），输出直接执行信号(a)，并与环境交互，而高阶控制器（HLC）有权限接受所有感知信号，并输出低阶控制器的调制信号(c)。值得注意的是，<strong>高阶控制器和低阶控制器可以具有不同的控制频率</strong>。</p>
+<h1 id="理论框架"><a href="#理论框架" class="headerlink" title="理论框架"></a>理论框架</h1><p>低阶控制器为部分感知信号和调制模态信号到执行信号的映射，即</p>
+<script type="math/tex; mode=display">(\mu, \sigma)=F_{L}(o^{P},c)</script><script type="math/tex; mode=display">a\sim N(\mu, \sigma)</script><p>高阶控制器为循环神经网络<script type="math/tex">F_{H}=(f_{H}, g_{H})</script>，更新频率为K，则</p>
+<script type="math/tex; mode=display">z_{t}=f_{H}(o_{t}^{F},z_{t-1} )</script><script type="math/tex; mode=display">c_{t}=g_{H}(z_{\tau_{(t)}} )</script><script type="math/tex; mode=display">\tau_{(t)}=[(t-1)/K]K+1</script><p>可以看出高阶控制器输出的调制模态信号是一个分段阶梯信号。</p>
+<h2 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h2><p>训练还是通用的强化学习框架，t时刻的未来回报<script type="math/tex">R_{t}=\Sigma _{t'=t}\gamma ^{t'-t}r_{t'}</script>，显然我们的优化目标为</p>
+<script type="math/tex; mode=display">max J= E[R_{0}]</script><p>根据RL with baseline,可以知道</p>
+<script type="math/tex; mode=display">\nabla_{\theta} J=\Sigma_{t}E|\nabla_{\theta}log \pi(\alpha_{t}|h_{t};\theta)(R_{t}-b_{t})|</script><p>其中<script type="math/tex">b_{t}</script>不依赖于<script type="math/tex">\alpha_{t'\geq t}</script>。</p>
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
 <center>本文由<b><a href="/index.html" target="_blank" title="foolyc">foolyc</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
 <center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="foolyc">foolyc</a></b></center>
@@ -400,6 +434,12 @@ var _hmt = _hmt || [];
 
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AI/" rel="tag"># AI</a>
+          
+        </div>
       
 
       
@@ -551,7 +591,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#spinal架构"><span class="nav-number">2.</span> <span class="nav-text">spinal架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#理论框架"><span class="nav-number">3.</span> <span class="nav-text">理论框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#训练"><span class="nav-number">3.1.</span> <span class="nav-text">训练</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#未完待续"><span class="nav-number">4.</span> <span class="nav-text">未完待续</span></a></li></ol></div>
             
 
           </div>
