@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://foolyc.com/2017/04/08/qr-code-segmentaion/</loc>
+    <lastmod>2017-04-08T07:53:43.802Z</lastmod>
+    <data>
+        <display>
+        <title>qr code segmentaion</title>
+        <pubTime>2017-04-08T07:45:43.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>opencv</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://foolyc.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://foolyc.com/2017/03/04/Learning-and-Transfer-of-Modulated-Locomotor-Controllers/</loc>
     <lastmod>2017-04-05T07:43:35.882Z</lastmod>
     <data>
@@ -53,9 +75,9 @@
         <title>linux message queue</title>
         <pubTime>2017-03-29T07:44:22.000Z</pubTime>
         
-        <tag>thread</tag>
-         
         <tag>AI</tag>
+         
+        <tag>thread</tag>
          
         <tag>c</tag>
          
