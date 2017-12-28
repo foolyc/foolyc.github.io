@@ -86,7 +86,7 @@ var _hmt = _hmt || [];
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="deep learning,alphago,mcts," />
+  <meta name="keywords" content="deep learning,python,tensorflow," />
 
 
 
@@ -102,19 +102,16 @@ var _hmt = _hmt || [];
 
 
 
-<meta name="description" content="alphago-note-mcts">
+<meta name="description" content="tensorflow自定义变量赋值及加载预训练模型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="alphago-note-mcts">
-<meta property="og:url" content="http://foolyc.com/2016/12/25/alphago-mcts-note/index.html">
+<meta property="og:title" content="tensorflow自定义变量赋值及加载预训练模型">
+<meta property="og:url" content="http://foolyc.com/2017/12/20/tensorflow01/index.html">
 <meta property="og:site_name" content="foolyc">
-<meta property="og:description" content="alphago-note-mcts">
-<meta property="og:image" content="http://foolyc.com/images/alphago-note-mcts_1.png">
-<meta property="og:image" content="http://foolyc.com/images/alphago-note-mcts_2.png">
-<meta property="og:updated_time" content="2017-03-01T07:45:56.425Z">
+<meta property="og:description" content="tensorflow自定义变量赋值及加载预训练模型">
+<meta property="og:updated_time" content="2017-12-28T03:07:58.513Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="alphago-note-mcts">
-<meta name="twitter:description" content="alphago-note-mcts">
-<meta name="twitter:image" content="http://foolyc.com/images/alphago-note-mcts_1.png">
+<meta name="twitter:title" content="tensorflow自定义变量赋值及加载预训练模型">
+<meta name="twitter:description" content="tensorflow自定义变量赋值及加载预训练模型">
 
 
 
@@ -142,13 +139,13 @@ var _hmt = _hmt || [];
 
 
 
-  <link rel="canonical" href="http://foolyc.com/2016/12/25/alphago-mcts-note/"/>
+  <link rel="canonical" href="http://foolyc.com/2017/12/20/tensorflow01/"/>
 
 
 
 
 
-  <title> alphago-note-mcts | foolyc </title>
+  <title> tensorflow自定义变量赋值及加载预训练模型 | foolyc </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -287,7 +284,7 @@ var _hmt = _hmt || [];
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://foolyc.com/2016/12/25/alphago-mcts-note/">
+  <link itemprop="mainEntityOfPage" href="http://foolyc.com/2017/12/20/tensorflow01/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="foolyc">
@@ -311,7 +308,7 @@ var _hmt = _hmt || [];
             
             
               
-                alphago-note-mcts
+                tensorflow自定义变量赋值及加载预训练模型
               
             
           </h2>
@@ -326,8 +323,8 @@ var _hmt = _hmt || [];
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-25T20:33:16+08:00">
-                2016-12-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-20T15:45:43+08:00">
+                2017-12-20
               </time>
             
 
@@ -349,8 +346,8 @@ var _hmt = _hmt || [];
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/AI/" itemprop="url" rel="index">
-                    <span itemprop="name">AI</span>
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
                   </a>
                 </span>
 
@@ -367,8 +364,8 @@ var _hmt = _hmt || [];
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/12/25/alphago-mcts-note/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/25/alphago-mcts-note/" itemprop="commentCount"></span>
+                <a href="/2017/12/20/tensorflow01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/12/20/tensorflow01/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -383,7 +380,7 @@ var _hmt = _hmt || [];
 
           
               <div class="post-description">
-                  alphago-note-mcts
+                  tensorflow自定义变量赋值及加载预训练模型
               </div>
           
 
@@ -398,15 +395,26 @@ var _hmt = _hmt || [];
       
 
       
-        <h1 id="Alphago-apv-mcts算法整理与总结"><a href="#Alphago-apv-mcts算法整理与总结" class="headerlink" title="Alphago apv-mcts算法整理与总结"></a>Alphago apv-mcts算法整理与总结</h1><p>MCTS算法可谓是整个Alphago的骨骼，不仅是最终决策的载体，同时还将SL network/value network/rollout policy network有效地整合在一起。</p>
-<p><img src="/images/alphago-note-mcts_1.png" alt="image"></p>
-<p><img src="/images/alphago-note-mcts_2.png" alt="image"></p>
+        <h1 id="tensorflow自定义变量赋值及加载预训练模型"><a href="#tensorflow自定义变量赋值及加载预训练模型" class="headerlink" title="tensorflow自定义变量赋值及加载预训练模型"></a>tensorflow自定义变量赋值及加载预训练模型</h1><p>在使用tensorflow实现算法的时候，我们通常会有自定义给我们网络参数赋值的需求，例如自定义更新或者加载部分预训练模型的时候。</p>
+<h2 id="变量赋值操作"><a href="#变量赋值操作" class="headerlink" title="变量赋值操作"></a>变量赋值操作</h2><p>tensorflow中的tensor提供了assign操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">b=np.random.random([1,2,3,4])</div><div class="line">a=tf.Variable(tf.zeros([1,2,3,4]), name=&quot;input&quot;)</div><div class="line">assign_placeholder = tf.placeholder(tf.float32, shape=[1,2,3,4])</div><div class="line">assign_op = a.assign(assign_placeholder)</div><div class="line">a._assign_placeholder = assign_placeholder</div><div class="line">a._assign_op = assign_op</div><div class="line">sess.run(assign_op, feed_dict=&#123;assign_placeholder: b&#125;)</div><div class="line">print sess.run(a)</div></pre></td></tr></table></figure>
+<p>上面的例子是根据Numpy数据给tensorflow变量赋值，如果是根据tensor给变量赋值，与上相同，不用建立占位符，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">update_op = []</div><div class="line">for key in weights_0:</div><div class="line">    update_op.append(weights_0[key].assign(value=weights_1[key]))</div><div class="line"></div><div class="line">sess.run(update_op, feed_dict=&#123;&#125;)</div></pre></td></tr></table></figure>
+<h2 id="加载预训练模型"><a href="#加载预训练模型" class="headerlink" title="加载预训练模型"></a>加载预训练模型</h2><p>很多时候我们需要用到别人预先训练好的模型，如果同样的网络结构（包扩命名），并且别人的模型是ckpt文件，那么很简单，我们只需要建立saver并restore即可。</p>
+<p>如果模型文件是caffemodel，可以用caffe加载后转存为hdf5格式，对于转化之后的hdf5格式权重文件或者keras训练的hdf5文件，我们都可以利用h5py打开，按照第一步所述，给我们自己的tensorflow网络初始化网络，这里有两种方式：</p>
+<p>a) 参数定义时即用预训练的数据，例如 <figure class="highlight plain"><figcaption><span>= tf.Variable(pretrain_weight))```，这种适合自己定义网络参数且网络不庞大时使用</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">b) 参数初始化之后，按照第一部分赋值操作给所有或部分参数赋值</div><div class="line"></div><div class="line">另外，如果别人的模型是ckpt文件，但是和我的网络结构不完全一致该怎么办呢？</div><div class="line"></div><div class="line">如果我们要使用的网络参数与别人命名一致，我们可以使用```from tensorflow.contrib.framework.python.ops.variables import assign_from_checkpoint_fn```中的函数```assign_from_checkpoint_fn</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">def assign_from_checkpoint_fn(model_path, var_list, ignore_missing_vars=False,</div><div class="line">                              reshape_variables=False):</div></pre></td></tr></table></figure>
+<p>我们命名方式也不同，我们只能先拿到ckpt所有参数，再根据第一部分内容再来一次赋值：</p>
+<p>获得ckpt中所有变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">reader = pywrap_tensorflow.NewCheckpointReader(model_path)</div><div class="line">var_to_shape_map = reader.get_variable_to_shape_map()</div></pre></td></tr></table></figure></p>
+<p>然后根据所需获得要的tensor<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reader.get_tensor(tensor_name)</div></pre></td></tr></table></figure></p>
+<p>然后根据第一步部分给参数赋值即可，简单示例：<br>需要加载参数原始命名name_ori， 自己网络中命名name_new， 而weight是网络参数列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">from tensorflow.python import pywrap_tensorflow</div><div class="line">reader = pywrap_tensorflow.NewCheckpointReader(&apos;~/inception_v3.ckpt&apos;)</div><div class="line">var_to_shape_map = reader.get_variable_to_shape_map()</div><div class="line">print(var_to_shape_map)</div><div class="line">b =reader.get_tensor(name_ori)</div><div class="line">assign_placeholder = tf.placeholder(tf.float32, shape=b.shape)</div><div class="line">assign_op = weight[name_new].assign(assign_placeholder)</div><div class="line">weight[name_new]._assign_placeholder = assign_placeholder</div><div class="line">weight[name_new]._assign_op = assign_op</div><div class="line">sess.run(assign_op, feed_dict=&#123;assign_placeholder: b&#125;)</div></pre></td></tr></table></figure>
 
 <center>本文由<b><a href="/index.html" target="_blank" title="foolyc">foolyc</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
 <center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="foolyc">foolyc</a></b></center>
-<center>本文标题为<b><a href="/2016/12/25/alphago-mcts-note/" target="_blank" title="alphago-note-mcts">alphago-note-mcts</a></b></center>
-<center>本文链接为<b><a href="/#/2016/12/25/alphago-mcts-note/" target="_blank" title="alphago-note-mcts">http://foolyc.com//2016/12/25/alphago-mcts-note/</a></b>.</center>
+<center>本文标题为<b><a href="/2017/12/20/tensorflow01/" target="_blank" title="tensorflow自定义变量赋值及加载预训练模型">tensorflow自定义变量赋值及加载预训练模型</a></b></center>
+<center>本文链接为<b><a href="/#/2017/12/20/tensorflow01/" target="_blank" title="tensorflow自定义变量赋值及加载预训练模型">http://foolyc.com//2017/12/20/tensorflow01/</a></b>.</center>
       
 	
     </div>
@@ -432,9 +440,9 @@ var _hmt = _hmt || [];
           
             <a href="/tags/deep-learning/" rel="tag"># deep learning</a>
           
-            <a href="/tags/alphago/" rel="tag"># alphago</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
-            <a href="/tags/mcts/" rel="tag"># mcts</a>
+            <a href="/tags/tensorflow/" rel="tag"># tensorflow</a>
           
         </div>
       
@@ -447,8 +455,8 @@ var _hmt = _hmt || [];
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/25/Softmax-Softmax Loss-Cross Entropy/" rel="next" title="Softmax/Softmax Loss/Cross Entropy">
-                <i class="fa fa-chevron-left"></i> Softmax/Softmax Loss/Cross Entropy
+              <a href="/2017/04/08/qr-code-segmentaion/" rel="next" title="qr code segmentaion">
+                <i class="fa fa-chevron-left"></i> qr code segmentaion
               </a>
             
           </div>
@@ -456,10 +464,6 @@ var _hmt = _hmt || [];
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/02/reading-note-michi-part1/" rel="prev" title="reading note michi part1">
-                reading note michi part1 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -485,8 +489,8 @@ var _hmt = _hmt || [];
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/25/alphago-mcts-note/"
-           data-title="alphago-note-mcts" data-url="http://foolyc.com/2016/12/25/alphago-mcts-note/">
+      <div class="ds-thread" data-thread-key="2017/12/20/tensorflow01/"
+           data-title="tensorflow自定义变量赋值及加载预训练模型" data-url="http://foolyc.com/2017/12/20/tensorflow01/">
       </div>
     
   </div>
@@ -588,7 +592,7 @@ var _hmt = _hmt || [];
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Alphago-apv-mcts算法整理与总结"><span class="nav-number">1.</span> <span class="nav-text">Alphago apv-mcts算法整理与总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tensorflow自定义变量赋值及加载预训练模型"><span class="nav-number">1.</span> <span class="nav-text">tensorflow自定义变量赋值及加载预训练模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量赋值操作"><span class="nav-number">1.1.</span> <span class="nav-text">变量赋值操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加载预训练模型"><span class="nav-number">1.2.</span> <span class="nav-text">加载预训练模型</span></a></li></ol></li></ol></div>
             
 
           </div>

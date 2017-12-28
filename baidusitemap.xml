@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://foolyc.com/2017/12/20/tensorflow01/</loc>
+    <lastmod>2017-12-28T03:07:58.513Z</lastmod>
+    <data>
+        <display>
+        <title>tensorflow自定义变量赋值及加载预训练模型</title>
+        <pubTime>2017-12-20T07:45:43.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>python</tag>
+         
+        <tag>tensorflow</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://foolyc.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://foolyc.com/2017/04/08/qr-code-segmentaion/</loc>
     <lastmod>2017-04-08T07:53:43.802Z</lastmod>
     <data>
@@ -75,11 +99,11 @@
         <title>linux message queue</title>
         <pubTime>2017-03-29T07:44:22.000Z</pubTime>
         
-        <tag>AI</tag>
-         
         <tag>thread</tag>
          
         <tag>c</tag>
+         
+        <tag>AI</tag>
          
          
            
