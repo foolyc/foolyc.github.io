@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://foolyc.com/about/index.html</loc>
+    
+    <lastmod>2018-01-01T10:44:57.268Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://foolyc.com/2017/12/20/tensorflow01/</loc>
     
     <lastmod>2018-01-01T10:30:44.452Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>http://foolyc.com/2017/02/28/auto-test-of-Go-program/</loc>
     
     <lastmod>2017-03-01T07:32:47.445Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://foolyc.com/about/index.html</loc>
-    
-    <lastmod>2017-02-26T13:20:21.877Z</lastmod>
     
   </url>
   
