@@ -108,7 +108,7 @@ var _hmt = _hmt || [];
 <meta property="og:url" content="http://foolyc.com/2017/12/20/tensorflow01/index.html">
 <meta property="og:site_name" content="foolyc">
 <meta property="og:description" content="tensorflow自定义变量赋值及加载预训练模型">
-<meta property="og:updated_time" content="2017-12-28T03:07:58.513Z">
+<meta property="og:updated_time" content="2018-01-01T10:30:44.452Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tensorflow自定义变量赋值及加载预训练模型">
 <meta name="twitter:description" content="tensorflow自定义变量赋值及加载预训练模型">
@@ -402,7 +402,10 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">update_op = []</div><div class="line">for key in weights_0:</div><div class="line">    update_op.append(weights_0[key].assign(value=weights_1[key]))</div><div class="line"></div><div class="line">sess.run(update_op, feed_dict=&#123;&#125;)</div></pre></td></tr></table></figure>
 <h2 id="加载预训练模型"><a href="#加载预训练模型" class="headerlink" title="加载预训练模型"></a>加载预训练模型</h2><p>很多时候我们需要用到别人预先训练好的模型，如果同样的网络结构（包扩命名），并且别人的模型是ckpt文件，那么很简单，我们只需要建立saver并restore即可。</p>
 <p>如果模型文件是caffemodel，可以用caffe加载后转存为hdf5格式，对于转化之后的hdf5格式权重文件或者keras训练的hdf5文件，我们都可以利用h5py打开，按照第一步所述，给我们自己的tensorflow网络初始化网络，这里有两种方式：</p>
-<p>a) 参数定义时即用预训练的数据，例如 <figure class="highlight plain"><figcaption><span>= tf.Variable(pretrain_weight))```，这种适合自己定义网络参数且网络不庞大时使用</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">b) 参数初始化之后，按照第一部分赋值操作给所有或部分参数赋值</div><div class="line"></div><div class="line">另外，如果别人的模型是ckpt文件，但是和我的网络结构不完全一致该怎么办呢？</div><div class="line"></div><div class="line">如果我们要使用的网络参数与别人命名一致，我们可以使用```from tensorflow.contrib.framework.python.ops.variables import assign_from_checkpoint_fn```中的函数```assign_from_checkpoint_fn</div></pre></td></tr></table></figure></p>
+<p>a) 参数定义时即用预训练的数据，例如weights[‘conv0’] = tf.Variable(pretrain_weight)), 这种适合自己定义网络参数且网络不庞大时使用</p>
+<p>b) 参数初始化之后，按照第一部分赋值操作给所有或部分参数赋值</p>
+<p>另外，如果别人的模型是ckpt文件，但是和我的网络结构不完全一致该怎么办呢？</p>
+<p>如果我们要使用的网络参数与别人命名一致，我们可以使用from tensorflow.contrib.framework.python.ops.variables import assign_from_checkpoint_fn中的函数assign_from_checkpoint_fn</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">def assign_from_checkpoint_fn(model_path, var_list, ignore_missing_vars=False,</div><div class="line">                              reshape_variables=False):</div></pre></td></tr></table></figure>
 <p>我们命名方式也不同，我们只能先拿到ckpt所有参数，再根据第一部分内容再来一次赋值：</p>
 <p>获得ckpt中所有变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">reader = pywrap_tensorflow.NewCheckpointReader(model_path)</div><div class="line">var_to_shape_map = reader.get_variable_to_shape_map()</div></pre></td></tr></table></figure></p>
@@ -615,7 +618,7 @@ var _hmt = _hmt || [];
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
