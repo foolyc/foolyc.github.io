@@ -3,6 +3,30 @@
 
 
     
+  <url>
+    <loc>http://foolyc.com/2018/01/02/tensorflow02/</loc>
+    <lastmod>2018-01-02T11:54:00.795Z</lastmod>
+    <data>
+        <display>
+        <title>tensorflow02-tensorflow变量共享及网络共享</title>
+        <pubTime>2018-01-02T11:04:57.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>python</tag>
+         
+        <tag>tensorflow</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://foolyc.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://foolyc.com/2017/12/20/tensorflow01/</loc>
@@ -100,9 +124,9 @@
         <title>linux message queue</title>
         <pubTime>2017-03-29T07:44:22.000Z</pubTime>
         
-        <tag>c</tag>
-         
         <tag>thread</tag>
+         
+        <tag>c</tag>
          
         <tag>AI</tag>
          
@@ -344,13 +368,13 @@
         <title>multithreaded simple datatype access and atomic variables</title>
         <pubTime>2017-02-14T12:33:16.000Z</pubTime>
         
+        <tag>thread</tag>
+         
         <tag>c</tag>
          
         <tag>pachi</tag>
          
         <tag>program</tag>
-         
-        <tag>thread</tag>
          
          
            

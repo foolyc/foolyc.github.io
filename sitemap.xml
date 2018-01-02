@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://foolyc.com/2018/01/02/tensorflow02/</loc>
+    
+    <lastmod>2018-01-02T11:54:00.795Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://foolyc.com/about/index.html</loc>
     
     <lastmod>2018-01-01T10:44:57.268Z</lastmod>
