@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://foolyc.com/2018/01/02/tensorflow02/</loc>
-    <lastmod>2018-01-02T11:54:00.795Z</lastmod>
+    <loc>http://foolyc.com/2017/02/02/tensorflow-variable/</loc>
+    <lastmod>2018-01-02T11:58:25.516Z</lastmod>
     <data>
         <display>
-        <title>tensorflow02-tensorflow变量共享及网络共享</title>
-        <pubTime>2018-01-02T11:04:57.000Z</pubTime>
+        <title>tensorflow variable</title>
+        <pubTime>2017-02-02T12:33:16.000Z</pubTime>
         
         <tag>deep learning</tag>
          
@@ -20,17 +20,16 @@
          
            
              
-              <breadCrumb title="program" url="http://foolyc.com/categories/program/"/>
+              <breadCrumb title="AI" url="http://foolyc.com/categories/AI/"/>
           
         </display>
     </data>
     </url>
 
     
-    
   <url>
     <loc>http://foolyc.com/2017/12/20/tensorflow01/</loc>
-    <lastmod>2018-01-01T10:30:44.452Z</lastmod>
+    <lastmod>2018-01-02T11:58:14.522Z</lastmod>
     <data>
         <display>
         <title>tensorflow自定义变量赋值及加载预训练模型</title>
@@ -45,12 +44,37 @@
          
            
              
-              <breadCrumb title="program" url="http://foolyc.com/categories/program/"/>
+              <breadCrumb title="AI" url="http://foolyc.com/categories/AI/"/>
           
         </display>
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://foolyc.com/2018/01/02/tensorflow02/</loc>
+    <lastmod>2018-01-02T11:58:08.889Z</lastmod>
+    <data>
+        <display>
+        <title>tensorflow02-tensorflow变量共享及网络共享</title>
+        <pubTime>2018-01-02T11:04:57.000Z</pubTime>
+        
+        <tag>deep learning</tag>
+         
+        <tag>python</tag>
+         
+        <tag>tensorflow</tag>
+         
+         
+           
+             
+              <breadCrumb title="AI" url="http://foolyc.com/categories/AI/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://foolyc.com/2017/04/08/qr-code-segmentaion/</loc>
@@ -126,9 +150,9 @@
         
         <tag>thread</tag>
          
-        <tag>c</tag>
-         
         <tag>AI</tag>
+         
+        <tag>c</tag>
          
          
            
@@ -244,30 +268,6 @@
            
              
               <breadCrumb title="AI" url="http://foolyc.com/categories/AI/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://foolyc.com/2017/02/02/tensorflow-variable/</loc>
-    <lastmod>2017-03-01T08:07:51.675Z</lastmod>
-    <data>
-        <display>
-        <title>tensorflow variable</title>
-        <pubTime>2017-02-02T12:33:16.000Z</pubTime>
-        
-        <tag>deep learning</tag>
-         
-        <tag>python</tag>
-         
-        <tag>tensorflow</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://foolyc.com/categories/program/"/>
           
         </display>
     </data>
