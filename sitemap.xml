@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://foolyc.com/2018/01/14/cpp-python-bingdings/</loc>
+    
+    <lastmod>2018-01-14T08:04:58.517Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://foolyc.com/2017/02/02/tensorflow-variable/</loc>
     
     <lastmod>2018-01-02T11:58:25.516Z</lastmod>
